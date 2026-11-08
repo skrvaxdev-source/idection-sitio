@@ -409,8 +409,8 @@
       <p class="lede">How IDection Files handles your data when it manages files on your phone, on your network, in encrypted folders, and in your backups.</p>
       <div class="meta-row">
         <span><strong>App:</strong> IDection Files</span>
-        <span><strong>Policy version:</strong> 1.8</span>
-        <span><strong>Last updated:</strong> November 7, 2026</span>
+        <span><strong>Policy version:</strong> 1.9</span>
+        <span><strong>Last updated:</strong> November 8, 2026</span>
       </div>
     </div>
   </div>
@@ -475,6 +475,11 @@
           <div class="dim" data-label="When">Only if you add Dropbox as a backup destination, each time that backup runs (by hand or on its schedule)</div>
         </div>
         <div class="summary-row">
+          <div class="label" data-label="Destination">OneDrive<br><span class="dim">(your own personal account)</span></div>
+          <div data-label="What is sent">Encrypted backup parts: neither Microsoft nor we can read their content or their file names</div>
+          <div class="dim" data-label="When">Only if you add OneDrive as a backup destination, each time that backup runs (by hand or on its schedule)</div>
+        </div>
+        <div class="summary-row">
           <div class="label" data-label="Destination">pCloud<br><span class="dim">(your own account)</span></div>
           <div data-label="What is sent">Encrypted backup parts: neither pCloud nor we can read their content or their file names</div>
           <div class="dim" data-label="When">Only if you add pCloud as a backup destination, each time that backup runs (by hand or on its schedule)</div>
@@ -520,9 +525,13 @@
       <p>If you add Dropbox as a backup destination, Dropbox asks you to sign in and to allow access to <strong>a single folder of its own</strong> (Apps › IDection Files): the app cannot see or change anything else in your Dropbox. The address of the account you chose is kept on the phone to label that destination, and the long-lived access Dropbox grants is stored <strong>encrypted in the operating system's secure storage</strong> (Android Keystore), so scheduled backups can run without asking you again. It is used only to talk to Dropbox and is never sent to us.</p>
       <p>As with Google Drive, what travels to Dropbox is <strong>already encrypted on your phone</strong>: Dropbox only sees opaque parts with random names and their sizes.</p>
 
+      <h3>OneDrive backups</h3>
+      <p>If you add OneDrive as a backup destination, you sign in on Microsoft's own page, opened in your browser — including two-step verification if you use it — so the app never sees your password. Only <strong>personal Microsoft accounts</strong> can be used. The app asks for Microsoft's <code>Files.ReadWrite.AppFolder</code> permission, which limits it to <strong>a single folder of its own</strong> (Apps › IDection Files): it cannot see or change anything else in your OneDrive. It also asks to read your basic profile (<code>User.Read</code>), only to learn the address of the account, which is kept on the phone to label that destination. The long-lived access Microsoft grants is stored <strong>encrypted in Android Keystore</strong>, so scheduled backups can run without asking you again. It is used only to talk to OneDrive and is never sent to us.</p>
+      <p>As with the other services, what travels to OneDrive is <strong>already encrypted on your phone</strong>: OneDrive only sees opaque parts with random names and their sizes.</p>
+
       <h3>pCloud backups</h3>
       <p>If you add pCloud as a backup destination, you sign in on pCloud's own page, opened in your browser — including two-step verification if you use it — so the app never sees your password. The app is registered with pCloud with access to <strong>a single folder of its own</strong> (Applications › IDection Files): it cannot see or change anything else in your pCloud. The address of the account is kept on the phone to label that destination, and the access pCloud grants is stored <strong>encrypted in Android Keystore</strong>, so scheduled backups can run without asking you again. It is used only to talk to pCloud and is never sent to us.</p>
-      <p>As with Google Drive and Dropbox, what travels to pCloud is <strong>already encrypted on your phone</strong>: pCloud only sees opaque parts with random names and their sizes.</p>
+      <p>As with Google Drive, Dropbox and OneDrive, what travels to pCloud is <strong>already encrypted on your phone</strong>: pCloud only sees opaque parts with random names and their sizes.</p>
 
       <h3>Encrypted folders</h3>
       <p>Your folder password is <strong>never stored</strong>, neither on the phone nor anywhere else: the encryption key is derived from it on the device. You can choose to open a folder with your fingerprint or face, in which case the key is protected by Android's own biometric system on the phone. When you create a folder the app shows you a recovery key once; it is up to you to keep it safe — we do not have a copy.</p>
@@ -554,6 +563,7 @@
         <li><strong>Your own servers, devices and storage services</strong> (SMB, WebDAV, FTP/FTPS, SFTP, S3 and DLNA): the credentials and files involved in what you do with that connector. The storage services tested with the app are Backblaze B2, Cloudflare R2, IDrive e2 and Wasabi (through S3) and Koofr (through WebDAV); any other compatible service works the same way. A storage service you choose handles your data under its own privacy policy, and backups reach it already encrypted on your phone.</li>
         <li><strong>Google</strong>, when you use Google Drive as a backup destination (encrypted parts and the authorization of your account) or save a folder key in Google (end-to-end encrypted). These are handled under <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</li>
         <li><strong>Dropbox</strong>, when you use Dropbox as a backup destination (encrypted parts and the authorization of your account). These are handled under <a href="https://www.dropbox.com/privacy" target="_blank" rel="noopener">Dropbox's Privacy Policy</a>.</li>
+        <li><strong>Microsoft</strong>, when you use OneDrive as a backup destination (encrypted parts and the authorization of your account). These are handled under the <a href="https://privacy.microsoft.com/privacystatement" target="_blank" rel="noopener">Microsoft Privacy Statement</a>.</li>
         <li><strong>pCloud (pCloud AG)</strong>, when you use pCloud as a backup destination (encrypted parts and the authorization of your account). These are handled under <a href="https://www.pcloud.com/privacy_policy/" target="_blank" rel="noopener">pCloud's Privacy Policy</a>.</li>
         <li><strong>Google Play (Google LLC)</strong>, which processes the purchase of Plus and its packs through Google Play Billing. We only receive confirmation that the purchase exists, never your payment method or banking details.</li>
         <li><strong>Devices on your Wi-Fi</strong> that sign in to a server you turned on, and other IDection Files on your local network, which can see this device's name and its visible servers (never their passwords; see "Nearby IDection devices" in §3).</li>
@@ -571,7 +581,7 @@
             <tr><td class="perm-name">MANAGE_EXTERNAL_STORAGE ("All files access")</td><td>IDection Files is a file manager: it needs to see, copy, move, rename and delete files in any folder of your phone's storage, and to keep the trash and the audit log in a visible folder. Android asks you to grant it by hand in its settings.</td></tr>
             <tr><td class="perm-name">READ_EXTERNAL_STORAGE</td><td>Reading the files of a local folder you choose on Android 12 and earlier, where it complements "All files access".</td></tr>
             <tr><td class="perm-name">WRITE_EXTERNAL_STORAGE</td><td>Only on Android 10 and earlier, which do not have "All files access": the classic storage permission, to copy, move, rename and delete files and keep the trash and the audit log in a visible folder.</td></tr>
-            <tr><td class="perm-name">INTERNET</td><td>Connecting to your connectors (SMB, WebDAV, FTP/FTPS, SFTP, S3, DLNA), to Google Drive, Dropbox and pCloud, and serving files when you turn on a server.</td></tr>
+            <tr><td class="perm-name">INTERNET</td><td>Connecting to your connectors (SMB, WebDAV, FTP/FTPS, SFTP, S3, DLNA), to Google Drive, Dropbox, OneDrive and pCloud, and serving files when you turn on a server.</td></tr>
             <tr><td class="perm-name">ACCESS_NETWORK_STATE / ACCESS_WIFI_STATE</td><td>Knowing whether a network is available, and making servers listen only on your Wi-Fi network or on the hotspot this phone shares.</td></tr>
             <tr><td class="perm-name">CHANGE_WIFI_MULTICAST_STATE</td><td>Finding DLNA servers on your network, and finding other IDection Files (or being found by them) through "Nearby IDection devices". It only works on the local network.</td></tr>
             <tr><td class="perm-name">FOREGROUND_SERVICE / FOREGROUND_SERVICE_DATA_SYNC</td><td>Finishing long copies, moves and backups when you leave the app, with a notification that shows their progress.</td></tr>
@@ -599,6 +609,7 @@
         <li><strong>The trash and the audit log:</strong> empty the trash from the app, or delete the <code>IDection Files</code> folder from your phone's storage.</li>
         <li><strong>Google Drive access:</strong> remove IDection Files from the third-party access of your Google account (<a href="https://myaccount.google.com/connections" target="_blank" rel="noopener">myaccount.google.com/connections</a>). Backups already in your Drive stay there until you delete them.</li>
         <li><strong>Dropbox access:</strong> remove IDection Files from the connected apps of your Dropbox account (<a href="https://www.dropbox.com/account/connected_apps" target="_blank" rel="noopener">dropbox.com/account/connected_apps</a>). Backups already in your Dropbox stay in Apps › IDection Files until you delete them.</li>
+        <li><strong>OneDrive access:</strong> remove IDection Files from the apps that can access your Microsoft account (<a href="https://account.live.com/consent/Manage" target="_blank" rel="noopener">account.live.com/consent/Manage</a>). Backups already in your OneDrive stay in Apps › IDection Files until you delete them.</li>
         <li><strong>pCloud access:</strong> remove IDection Files from the apps connected to your pCloud account, in your pCloud account settings. Backups already in your pCloud stay in Applications › IDection Files until you delete them.</li>
         <li><strong>Key copies saved in Google:</strong> delete them from the encrypted folder's options in the app.</li>
         <li><strong>Everything at once:</strong> uninstalling the app deletes its settings and saved credentials. Your encrypted folders, backups and the visible <code>IDection Files</code> folder stay where they are, because they are your files — delete them there if you no longer want them.</li>
@@ -612,7 +623,7 @@
       <ul>
         <li><strong>Servers:</strong> turning on the WebDAV, FTP and SFTP servers of the Services tab.</li>
         <li><strong>Encryption:</strong> creating encrypted folders and adding files to them, and backups, made by hand or scheduled.</li>
-        <li><strong>Cloud:</strong> Google Drive, Dropbox, pCloud and S3-compatible storage, also as backup destinations (backups also need Encryption).</li>
+        <li><strong>Cloud:</strong> Google Drive, Dropbox, OneDrive and pCloud as backup destinations, and S3-compatible storage as a connector and as a backup destination (backups also need Encryption).</li>
       </ul>
       <p>Without a pack nothing you created is deleted: scheduled backups are paused and servers simply stay off.</p>
       <p><strong>Encryption</strong> has a free 90-day trial, which can be started until March 31, 2027 and ends on April 1, 2027 at the latest. The trial is not a purchase: the app keeps its start date only on your phone and never sends it anywhere. When it ends, your encrypted folders and backups still open for free.</p>
@@ -628,6 +639,7 @@
       <h2><span class="num">§10</span> Changes to this policy</h2>
       <p>If we change what data the app handles or where it goes, we will update this same page and the date in the header. Important changes (for example, a new destination for your data) will also be announced inside the app.</p>
       <ul>
+        <li><strong>Version 1.9 (November 8, 2026):</strong> OneDrive (personal Microsoft accounts) is added as an optional backup destination, with access limited to the app's own folder and your backups encrypted on your phone, as with Google Drive, Dropbox and pCloud. The Cloud pack is described more precisely: cloud services are backup destinations, and S3-compatible storage is also a connector. Nothing else changes in what data is handled or where it goes.</li>
         <li><strong>Version 1.8 (November 7, 2026):</strong> the single Plus add-on becomes Plus and three packs (Servers, Encryption and Cloud), each a single purchase through Google Play Billing, and Encryption gets a free 90-day trial whose start date stays on the phone. Nothing else changes in what data is handled or where it goes.</li>
         <li><strong>Version 1.7 (November 7, 2026):</strong> the contact address changes to support@idection.com (messages to the previous address still reach us). File servers can also listen on the hotspot this phone shares. We describe what the app shows to other IDection Files on your local network through "Nearby IDection devices" (the name of this device and its visible servers, never their passwords) and the CHANGE_WIFI_MULTICAST_STATE permission it uses. Nothing else changes in what data is handled or where it goes.</li>
         <li><strong>Version 1.6 (October 22, 2026):</strong> pCloud is added as an optional backup destination, with access limited to the app's own folder and your backups encrypted on your phone, as with Google Drive and Dropbox. The app now offers the <strong>Plus</strong> add-on, a single purchase processed by Google Play Billing (see §8); we never receive your payment details. Nothing else changes in what data is handled or where it goes.</li>
@@ -650,7 +662,7 @@
 
 <footer>
   <hr class="rule">
-  <p>IDection Files — Privacy Policy · Version 1.8 · November 7, 2026</p>
+  <p>IDection Files — Privacy Policy · Version 1.9 · November 8, 2026</p>
 </footer>
 </body>
 </html>
