@@ -409,7 +409,7 @@
       <p class="lede">How IDection Files handles your data when it manages files on your phone, on your network, in encrypted folders, and in your backups.</p>
       <div class="meta-row">
         <span><strong>App:</strong> IDection Files</span>
-        <span><strong>Policy version:</strong> 1.9</span>
+        <span><strong>Policy version:</strong> 1.10</span>
         <span><strong>Last updated:</strong> November 8, 2026</span>
       </div>
     </div>
@@ -589,7 +589,7 @@
             <tr><td class="perm-name">POST_NOTIFICATIONS</td><td>Showing the progress of tasks and servers, and telling you if a scheduled backup fails.</td></tr>
             <tr><td class="perm-name">WAKE_LOCK</td><td>Keeping the phone from sleeping in the middle of a transfer or while a server is on.</td></tr>
             <tr><td class="perm-name">RECEIVE_BOOT_COMPLETED</td><td>Included by Android's WorkManager so that scheduled backups keep their schedule after the phone restarts.</td></tr>
-            <tr><td class="perm-name">REQUEST_IGNORE_BATTERY_OPTIMIZATIONS</td><td>Being able to ask you — never force you — to exempt the app from battery optimization, so long copies, scheduled backups and servers are not paused.</td></tr>
+            <tr><td class="perm-name">REQUEST_IGNORE_BATTERY_OPTIMIZATIONS</td><td>Being able to ask you — never force you — to exempt the app from battery optimization, so long copies, scheduled backups and servers are not paused. The app asks only when you turn on a server, start a copy or a move, or back up, and explains why first; Android shows its own question and you can decline, in which case the app shows the steps to do it yourself in Android's settings. Some phone brands have their own battery saver on top of Android's: to tell you where to check it, the app reads the brand name of the phone, only on the phone. Nothing about your battery is sent anywhere.</td></tr>
             <tr><td class="perm-name">USE_BIOMETRIC / USE_FINGERPRINT</td><td>Opening an encrypted folder with your fingerprint or face, if you turn it on.</td></tr>
           </tbody>
         </table>
@@ -639,6 +639,7 @@
       <h2><span class="num">§10</span> Changes to this policy</h2>
       <p>If we change what data the app handles or where it goes, we will update this same page and the date in the header. Important changes (for example, a new destination for your data) will also be announced inside the app.</p>
       <ul>
+        <li><strong>Version 1.10 (November 8, 2026):</strong> we describe in more detail how the app uses the battery permission (REQUEST_IGNORE_BATTERY_OPTIMIZATIONS): it asks only when you turn on a server, start a copy or a move, or back up; Android shows its own question and you can decline; and the app reads the brand name of the phone, only on the phone, to show where to check the brand's own battery saver. Nothing else changes in what data is handled or where it goes.</li>
         <li><strong>Version 1.9 (November 8, 2026):</strong> OneDrive (personal Microsoft accounts) is added as an optional backup destination, with access limited to the app's own folder and your backups encrypted on your phone, as with Google Drive, Dropbox and pCloud. The Cloud pack is described more precisely: cloud services are backup destinations, and S3-compatible storage is also a connector. Among the storage services tested with the app, only IDrive e2 and Koofr are named now. Nothing else changes in what data is handled or where it goes.</li>
         <li><strong>Version 1.8 (November 7, 2026):</strong> the single Plus add-on becomes Plus and three packs (Servers, Encryption and Cloud), each a single purchase through Google Play Billing, and Encryption gets a free 90-day trial whose start date stays on the phone. Nothing else changes in what data is handled or where it goes.</li>
         <li><strong>Version 1.7 (November 7, 2026):</strong> the contact address changes to support@idection.com (messages to the previous address still reach us). File servers can also listen on the hotspot this phone shares. We describe what the app shows to other IDection Files on your local network through "Nearby IDection devices" (the name of this device and its visible servers, never their passwords) and the CHANGE_WIFI_MULTICAST_STATE permission it uses. Nothing else changes in what data is handled or where it goes.</li>
@@ -662,7 +663,7 @@
 
 <footer>
   <hr class="rule">
-  <p>IDection Files — Privacy Policy · Version 1.9 · November 8, 2026</p>
+  <p>IDection Files — Privacy Policy · Version 1.10 · November 8, 2026</p>
 </footer>
 </body>
 </html>
