@@ -3,6 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <meta name="color-scheme" content="light dark">
 <meta name="description" content="IDection Audio privacy policy: what data the app handles, who it is shared with, and how to delete it.">
 <meta name="robots" content="index,follow">
@@ -398,20 +401,15 @@
 
 <header class="masthead">
   <div class="masthead-inner">
-    <svg class="mark" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <rect x="1" y="1" width="42" height="42" rx="11" stroke="var(--accent)" stroke-width="2"/>
-      <rect x="11" y="23" width="5" height="9" rx="2.5" fill="var(--accent)"/>
-      <rect x="19.5" y="17" width="5" height="15" rx="2.5" fill="var(--accent)"/>
-      <rect x="28" y="11" width="5" height="21" rx="2.5" fill="var(--accent)"/>
-    </svg>
+    <a href="/" aria-label="IDection"><img class="mark" src="/assets/idection_simbolo.svg" alt="" width="56" height="56"></a>
     <div class="masthead-text">
       <span class="eyebrow">Legal document · Android and iPhone app</span>
       <h1>Privacy Policy</h1>
       <p class="lede">How IDection Audio handles your data when playing music on your Android phone or iPhone, over your network, through a USB DAC, on Chromecast/DLNA, and from your own Dropbox, OneDrive, pCloud or S3-compatible storage (read-only).</p>
       <div class="meta-row">
         <span><strong>App:</strong> IDection Audio</span>
-        <span><strong>Policy version:</strong> 1.11</span>
-        <span><strong>Last updated:</strong> November 7, 2026</span>
+        <span><strong>Policy version:</strong> 1.12</span>
+        <span><strong>Last updated:</strong> November 22, 2026</span>
       </div>
     </div>
   </div>
@@ -488,11 +486,6 @@
           <div class="dim" data-label="When">When you open that source or play one of its tracks</div>
         </div>
         <div class="summary-row">
-          <div class="label" data-label="Destination">Google<br><span class="dim">(ML Kit, lyrics translation)</span></div>
-          <div data-label="What is sent">Diagnostics about the translation feature, including the languages involved — the lyrics are translated on your phone and are not sent — see §3</div>
-          <div class="dim" data-label="When">Only if you turn on lyrics translation; the first time per language it also downloads a language model</div>
-        </div>
-        <div class="summary-row">
           <div class="label" data-label="Destination">Google Play<br><span class="dim">(on Android)</span></div>
           <div data-label="What is sent">The purchase transaction for Plus or one of its packs, and a check for app updates</div>
           <div class="dim" data-label="When">The purchase, only if you buy Plus or a pack — Google processes the payment, not us. The update check, each time the app starts</div>
@@ -513,12 +506,12 @@
           <div class="dim" data-label="When">Only if you tap "Share" and pick a destination yourself</div>
         </div>
       </div>
-      <p style="margin-top:16px">We add no analytics or advertising of our own, there is no cross-app tracking, and we sell data to no one. The only diagnostics sent are produced by Google's own libraries — the Cast SDK when you cast, and ML Kit when you translate lyrics — and they never reach us. Everything else — your favorites, your usage history, your saved sources (including your SACD discs and your Dropbox, pCloud and S3 sources), the settings of your DACs — lives only on your phone.</p>
+      <p style="margin-top:16px">We add no analytics or advertising of our own, there is no cross-app tracking, and we sell data to no one. The only diagnostics sent are produced by Google's own casting library — the Cast SDK, when you cast — and they never reach us. Everything else — your favorites, your usage history, your saved sources (including your SACD discs and your Dropbox, pCloud and S3 sources), the settings of your DACs — lives only on your phone.</p>
     </section>
 
     <section id="controller">
       <h2><span class="num">§2</span> Data controller</h2>
-      <p>IDection Audio is developed and published by Sergio Augusto Carvallo Crisóstomo, as an individual — there is no company behind it. For any question about this policy or your data, write to <a href="mailto:support@idection.com">support@idection.com</a>.</p>
+      <p>IDection Audio is developed and published by IDection SpA, a company of Chile, which is the controller of the data described in this policy. For any question about this policy or your data, write to <a href="mailto:support@idection.com">support@idection.com</a>.</p>
     </section>
 
     <section id="data">
@@ -551,13 +544,6 @@
       <h3>S3-compatible storage</h3>
       <p>You can add a bucket of an S3-compatible storage service as a source — for example Backblaze B2, Wasabi, Cloudflare R2, IDrive e2, Amazon S3, or your own NAS with S3. You enter its address (endpoint), the bucket, an Access Key ID and its Secret Access Key, and optionally a folder. They are stored <strong>encrypted in Android Keystore</strong> (the Keychain on iPhone), only on your phone, like the credentials of your network sources. The app uses them only to sign its requests to <strong>the address you entered</strong>: the secret key itself is never sent, and nothing reaches us. The app <strong>only reads</strong>: it lists the files of that bucket and folder and reads the tracks you play, so a read-only key is enough — and recommended. Your music travels straight from that service to your phone, in parts as it plays. "Wi-Fi only" applies to S3 sources too.</p>
 
-      <h3>Song lyrics</h3>
-      <p>The lyrics you see come from the song file itself: a <code>.lrc</code> file with the same name next to it, or the lyrics saved in the file's own tags. <strong>The app does not ask any service for lyrics</strong>, so the title, the artist or anything else about what you are listening to is never sent anywhere. They are read on your phone, and we do not store them.</p>
-
-      <h3>Lyrics translation (Google ML Kit)</h3>
-      <p>If you turn on translation in the lyrics view, the lyrics are translated <strong>on your phone</strong> with Google's ML Kit library: the text of the lyrics is not sent to any server for translation. The first time you translate from or into a language, ML Kit downloads that language's model (about 30 MB) from Google.</p>
-      <p>As Google documents, <strong>that library, not IDection Audio, sends diagnostics and usage data to Google</strong>: information about the phone (manufacturer, model, Android version), the app's package name and version, per-installation identifiers that are not intended to identify you, performance metrics, error codes, and, for this feature, the source and destination languages and the language it detected. Google says it encrypts this data in transit and does not transfer it to third parties. We never receive it. If you never turn on translation, none of this is sent. Details: <a href="https://developers.google.com/ml-kit/android-data-disclosure" target="_blank" rel="noopener">ML Kit data disclosure</a>. The target language you choose is stored only on your phone.</p>
-
       <h3>Casting logs (Google Cast SDK)</h3>
       <p>To stream to Chromecast devices, the app uses Google's Cast SDK. <strong>That library, not IDection Audio, sends anonymized logs to Google</strong> about how casting works: device discovery events, casting session events, general information about the phone, and which app is casting. According to Google, these logs contain no identifiers that can be traced back to you, are encrypted in transit, are used only to improve the casting experience, and are kept for a short period before being aggregated. We never receive them, and neither we nor you can turn them off or request their deletion. Details: <a href="https://developers.google.com/cast/docs/android_sender/data_disclosure" target="_blank" rel="noopener">Cast SDK data disclosure</a>.</p>
       <p>The iPhone version of the same library declares to Apple, in its privacy manifest, the kind of data it collects for these logs: a <strong>device identifier</strong>, <strong>product interaction</strong> and <strong>other diagnostic data</strong>, used for analytics and for the casting feature to work, <strong>not linked to you and not used for tracking</strong>. That is why the App Store's privacy label for IDection Audio lists those three items. We do not collect them ourselves and never receive them.</p>
@@ -567,7 +553,7 @@
       <p>What the app does with this access is limited by design: <strong>we do not read, store, or transmit the content of any notification.</strong> Technically, the service does not implement the methods that receive notifications — not from messaging apps, not from email, not from anything else. You can revoke this access at any time in Android settings, and the rest of the app keeps working.</p>
 
       <h3>Status of your Bluetooth devices (Android)</h3>
-      <p>The "Bluetooth audio" screen reads from the system which audio device is connected, with which codec, at which volume, and with how much battery, in order to show it to you. This information is read on the spot and is <strong>neither stored nor transmitted</strong>. With the Plus add-on you can also ask the system to use a different codec, on devices that allow it: some phones do not let apps read or change the codec, and on those the app says so and does not offer the option. That request never leaves the phone. We do not access any other data from your paired devices, nor your contacts, nor messages.</p>
+      <p>The "Bluetooth audio" screen reads from the system which audio device is connected, with which codec, at which volume, and with how much battery, in order to show it to you. This information is read on the spot and is <strong>neither stored nor transmitted</strong>. You can also ask the system to use a different codec, on devices that allow it: some phones do not let apps read or change the codec, and on those the app says so and does not offer the option. That request never leaves the phone. We do not access any other data from your paired devices, nor your contacts, nor messages.</p>
 
       <h3>Diagnostics log</h3>
       <p>We keep, locally and only on your phone, a technical log of errors and of some of the app's internal decisions — for example, a playback error, which source, receiver or DAC was active at that moment, whether a track was sent as is or converted before sending it to a receiver, the app's battery setting (for example, "unrestricted") when it starts sending to a receiver, or the reason Android gave for closing the app the previous time (for example, low memory or an error). It may include file or folder names, the names of your sources, <strong>local IP addresses and the names of devices on your network</strong> (such as receivers or DACs), as well as the app and Android versions — <strong>never your passwords</strong>. It is visible on the Home screen, under System → Diagnostics, and it is <strong>never sent anywhere on its own</strong>: it only leaves your phone if you share it yourself. <strong>Entries older than 30 days are deleted automatically.</strong></p>
@@ -581,7 +567,7 @@
 
       <h3>What we do NOT do</h3>
       <ul>
-        <li>We add no analytics, advertising, or tracking SDKs. The only diagnostics sent are those of Google's own libraries described above — the Cast SDK when you cast, and ML Kit when you translate lyrics — which we never receive.</li>
+        <li>We add no analytics, advertising, or tracking SDKs. The only diagnostics sent are those of Google's own casting library described above — the Cast SDK, when you cast — which we never receive.</li>
         <li>We do not access your location — the network permission used to discover Chromecast/DLNA devices is explicitly declared to Android as "never used for location". On iPhone the app asks only for local network access, and never for location.</li>
         <li>We do not read the content of your notifications, even with the access enabled (see above).</li>
         <li>We do not read, index, or upload the content of your music files to any server.</li>
@@ -599,7 +585,6 @@
         <li><strong>Microsoft OneDrive (Microsoft Corporation)</strong> — only if you add a OneDrive source: your phone signs in to Microsoft and reads the files in the app's own folder. Microsoft handles that data under its own <a href="https://privacy.microsoft.com/privacystatement">privacy statement</a>.</li>
         <li><strong>pCloud (pCloud AG)</strong> — only if you add a pCloud source: your phone signs in to pCloud and, with read-only access, lists the folders of that source and reads the tracks you play. pCloud handles that data under its own <a href="https://www.pcloud.com/privacy_policy/">privacy policy</a>.</li>
         <li><strong>The S3-compatible storage service you choose</strong> — only if you add an S3 source: your phone sends it requests signed with the key you entered, to list that bucket and read the tracks you play. That service handles that data under its own privacy policy.</li>
-        <li><strong>Google (ML Kit)</strong> — only if you turn on lyrics translation, it receives the diagnostics described in <a href="#data">§3</a>, collected directly by Google's library, and serves the language models. The lyrics themselves are translated on your phone.</li>
         <li><strong>Apple (App Store), on iPhone</strong> — it processes purchases of Plus and its packs through the App Store. We only receive confirmation that the purchase exists, never your Apple ID, payment method or banking details.</li>
         <li><strong>Google Play (Google LLC), on Android</strong> — it processes purchases of Plus and its packs through Google Play Billing. We only receive confirmation that the purchase exists, never your payment method or banking details. Each time the app starts it also asks Google Play, on your phone, whether a newer version is available, and Google Play offers to download it; this uses Google Play's in-app updates service and sends no data of ours.</li>
         <li><strong>Google (Google Cast SDK)</strong> — it receives the anonymized casting logs described in <a href="#data">§3</a>, collected directly by Google's library. They are not shared with us or with anyone else.</li>
@@ -619,7 +604,7 @@
             <tr><th>Permission</th><th>What we use it for</th></tr>
           </thead>
           <tbody>
-            <tr><td class="perm-name">INTERNET</td><td>Connecting to your network sources, to your Dropbox, OneDrive, pCloud or S3 storage when you add them, to Chromecast/DLNA, and downloading translation language models.</td></tr>
+            <tr><td class="perm-name">INTERNET</td><td>Connecting to your network sources, to your Dropbox, OneDrive, pCloud or S3 storage when you add them and to Chromecast/DLNA.</td></tr>
             <tr><td class="perm-name">ACCESS_WIFI_STATE / ACCESS_NETWORK_STATE</td><td>Knowing whether a network is available before trying to connect, and showing this device's Wi-Fi signal strength, band and link speed in the connectivity details of DLNA receivers. The app does not read the name of your Wi-Fi network.</td></tr>
             <tr><td class="perm-name">CHANGE_WIFI_MULTICAST_STATE</td><td>Discovering DLNA receivers and libraries on your local network, and being visible as a receiver or library when you turn that mode on (SSDP protocol).</td></tr>
             <tr><td class="perm-name">NEARBY_WIFI_DEVICES</td><td>Discovering nearby Chromecast devices. Explicitly declared as <em>never used for location</em>.</td></tr>
@@ -687,7 +672,7 @@
     <section id="purchases">
       <h2><span class="num">§8</span> Purchases: Plus and its packs</h2>
       <p>IDection Audio works fully and <strong>without ads</strong> in its free mode: all audio, high resolution included, except DSD and SACD (also over DoP), the equalizer, favorites, local folders and sources, and two DLNA connectors — one library and one player, either using them on your network (as a client) or publishing this device as one (as a server).</p>
-      <p><strong>90-day free trial.</strong> Output to a USB DAC (direct USB bit-perfect output on Android; each track at its original sample rate on iPhone) and DLNA+ can be tried free for 90 days, with one trial for both. It can be started until March 31, 2027; on Android it also ends that day at the latest, and on iPhone it lasts its full 90 days. After it, bit-perfect comes with Plus Hi-Res and DLNA+ with Plus Cast (or both with Plus). On Android, the app keeps the trial's start date on your phone. On iPhone, the trial is a zero-price purchase in the App Store, and the app reads its date from the App Store. Nothing about the trial is sent to us.</p>
+      <p><strong>90-day free trial.</strong> Output to a USB DAC (direct USB bit-perfect output on Android; each track at its original sample rate on iPhone) and DLNA+ can be tried free for 90 days, with one trial for both. On Android it can be started until February 28, 2027, and it ends on March 31, 2027 at the latest; on iPhone it can be started until March 31, 2027, and it lasts its full 90 days. After it, bit-perfect comes with Plus Hi-Res and DLNA+ with Plus Cast (or both with Plus). On Android, the app keeps the trial's start date on your phone. On iPhone, the trial is a zero-price purchase in the App Store, and the app reads its date from the App Store. Nothing about the trial is sent to us.</p>
       <p><strong>Plus</strong> is a one-time purchase — it is not a subscription and it is never charged on a recurring basis. It unlocks everything: <strong>Cast</strong> (streaming to Chromecast, unlimited DLNA connectors and DLNA+), <strong>Hi-Res</strong> (playing DSD audio — DSF, DFF and SACD discs in ISO —, also over DoP to your USB DAC, and the USB DAC output) and <strong>Sources</strong> (network sources: SMB/Samba and WebDAV; read-only cloud sources: Dropbox, OneDrive, pCloud and S3-compatible storage).</p>
       <p>The same features are also sold as three packs — <strong>Plus Cast</strong>, <strong>Plus Hi-Res</strong> and <strong>Plus Sources</strong> —, each a one-time purchase too, all three at the same price, so that together they cost no more than Plus. Buying Plus or a pack only unlocks features in the app; nothing about it is sent to us.</p>
       <p>On Android purchases are processed entirely through Google Play Billing; you can restore them on any device where you sign in with the same Google account, using the "Restore purchase" button on the Plus screen. If you have a promo code, you redeem it in Google Play like any promo code. On iPhone they are processed entirely through the App Store; "Restore purchase" restores them on any iPhone signed in with the same Apple ID.</p>
@@ -707,6 +692,7 @@
       <h2><span class="num">§10</span> Changes to this policy</h2>
       <p>If we change what data we collect or how we use it, we will update this same page and the date in the header. Important changes (for example, adding a new type of data shared with a third party) will also be announced inside the app.</p>
       <ul>
+        <li><strong>Version 1.12 (November 22, 2026):</strong> IDection Audio is now published by IDection SpA, a company of Chile, which is the controller of your data. The app does not show song lyrics or translate them, so this policy no longer describes them or Google's ML Kit library, which was used only to translate them. On Android, the free trial can be started until February 28, 2027. Changing the Bluetooth codec is described without tying it to Plus. Nothing new is sent to us.</li>
         <li><strong>Version 1.11 (November 7, 2026):</strong> Google Drive is no longer a source: the app no longer signs in to Google or reads anything from Google Drive, and a Google Drive source saved by an earlier test version is deleted from your phone, with its sign-in, when the app updates. To remove the app's access completely, use <a href="https://myaccount.google.com/connections">Google Account → Third-party connections</a>. You can add your own OneDrive as a source: the app only reads the files in its own folder (Apps › IDection Audio), even though Microsoft's screen asks for permission to read and write there; only personal Microsoft accounts. Plus Cast, Plus Hi-Res and Plus Sources now have a single price each. Nothing new is sent to us.</li>
         <li><strong>Version 1.10 (October 28, 2026):</strong> DLNA+, which controls the DLNA receivers on your local network (also through the local control interface some receivers expose), and what it keeps on your phone; reporting a DLNA receiver that doesn't respond, which only you send; the 90-day free trial of USB bit-perfect output and DLNA+, which replaces the Beta; the free mode described as all audio, high resolution included, except DSD and SACD; Plus Cast now includes DLNA+. The policy now lives at idection.com/audio/privacy and the contact address is support@idection.com. Nothing new is sent to us.</li>
         <li><strong>Version 1.9 (October 25, 2026):</strong> the free mode includes two DLNA connectors, one library and one player, as a client or as a server: publishing this device as a DLNA library or player now uses the same free connector as using one on your network. Nothing new is sent to us.</li>
@@ -739,7 +725,7 @@
 
 <footer>
   <hr class="rule">
-  <p>IDection Audio — Privacy Policy · Version 1.11 · November 7, 2026</p>
+  <p>IDection Audio — Privacy Policy · Version 1.12 · November 22, 2026</p>
 </footer>
 </body>
 </html>

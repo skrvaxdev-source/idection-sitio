@@ -3,6 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <meta name="color-scheme" content="light dark">
 <meta name="description" content="IDection Audio support: how to get started on iPhone and Android, frequent questions, and how to contact us.">
 <meta name="robots" content="index,follow">
@@ -395,12 +398,7 @@
 <body>
 <header class="masthead">
   <div class="masthead-inner">
-    <svg class="mark" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <rect x="1" y="1" width="42" height="42" rx="11" stroke="var(--accent)" stroke-width="2"/>
-      <rect x="11" y="23" width="5" height="9" rx="2.5" fill="var(--accent)"/>
-      <rect x="19.5" y="17" width="5" height="15" rx="2.5" fill="var(--accent)"/>
-      <rect x="28" y="11" width="5" height="21" rx="2.5" fill="var(--accent)"/>
-    </svg>
+    <a href="/" aria-label="IDection"><img class="mark" src="/assets/idection_simbolo.svg" alt="" width="56" height="56"></a>
     <div class="masthead-text">
       <span class="eyebrow">Support · Android and iPhone app</span>
       <h1>IDection Audio Support</h1>
@@ -439,7 +437,7 @@
     <section id="start">
       <h2><span class="num">§2</span> Getting started</h2>
       <p><strong>On iPhone:</strong> put your music in <strong>Files › On My iPhone › IDection Audio</strong>, the app's own folder — with the Files app, or from a Mac or PC with the iPhone connected (Finder or Apple Devices, under Files). It then appears in the Audio tab. To play from your network or your cloud, add a source under Sources › New connection.</p>
-      <p><strong>On Android:</strong> open Media › Local folder and choose the folder where your music is, or add a network or cloud source under Sources.</p>
+      <p><strong>On Android:</strong> in Audio, choose <strong>Device folder</strong> and pick the folder where your music is, or add a network or cloud source under Sources › New connection.</p>
     </section>
 
     <section id="faq">
@@ -450,6 +448,10 @@
       <p>Some receivers play without reporting their position. After a few seconds the app keeps the time with its own clock, so the music and the bar go on normally.</p>
       <h3>Using a USB DAC</h3>
       <p>Connect the DAC with a USB cable or adapter suited to your phone. On iPhone, each track reaches the DAC at its original sample rate; DSD can travel over DoP if your DAC understands it (Plus). iOS does not allow exclusive access to the DAC, so system sounds may mix in: turn off keyboard clicks and lock sounds for critical listening. If the DAC is not detected, try another cable first.</p>
+      <h3>Music stops when the screen turns off (Android)</h3>
+      <p>Some phones pause apps in the background to save battery. In Android's settings for IDection Audio, set the battery to <strong>Unrestricted</strong> — the app offers to take you there when it detects a restriction — and check that Battery Saver is off while you listen.</p>
+      <h3>Does it show lyrics, edit tags or read M3U playlists?</h3>
+      <p>IDection Audio never changes your files: it plays them exactly as they are. That's why, for now, it doesn't edit track metadata (ID3 and other tags), show lyrics or read M3U playlists. We don't rule these out for the future.</p>
       <h3>Restoring Plus</h3>
       <p>Plus is a one-time purchase. On a new phone, open the Plus screen and tap <strong>Restore purchase</strong>, signed in with the same Apple ID (iPhone) or Google account (Android) you bought it with.</p>
       <h3>Reporting a problem</h3>
@@ -467,13 +469,17 @@
       <p>Escríbenos a <a href="mailto:support@idection.com">support@idection.com</a>. Incluye la versión de la app (Inicio › Sistema › Acerca de), el modelo de tu teléfono y qué estabas haciendo cuando ocurrió el problema. Solemos responder en unos días.</p>
       <h3>Para empezar</h3>
       <p><strong>En iPhone:</strong> pon tu música en <strong>Archivos › En mi iPhone › IDection Audio</strong>, la carpeta de la app, con la app Archivos o desde un Mac o PC con el iPhone conectado (Finder o Dispositivos Apple, en Archivos). Después aparece en la pestaña Audio. Para escuchar desde tu red o tu nube, agrega un origen en Orígenes › Nueva conexión.</p>
-      <p><strong>En Android:</strong> abre Medios › Carpeta local y elige la carpeta de tu música, o agrega un origen de red o de nube en Orígenes.</p>
+      <p><strong>En Android:</strong> en Audio, elige <strong>Carpeta del dispositivo</strong> y la carpeta de tu música, o agrega un origen de red o de nube en Orígenes › Nueva conexión.</p>
       <h3>Mi TV, parlante o Chromecast no aparece</h3>
       <p>El teléfono y el equipo tienen que estar en la misma red local. En iPhone, revisa además que esté activado Ajustes › Privacidad y seguridad › Red local › IDection Audio. Algunos TV muestran una pregunta para aceptar la transmisión la primera vez: acéptala en el TV.</p>
       <h3>La barra no avanza mientras suena en un receptor</h3>
       <p>Algunos receptores reproducen sin informar su posición. A los pocos segundos la app lleva el tiempo con su propio reloj, y la música y la barra siguen con normalidad.</p>
       <h3>Usar un DAC USB</h3>
       <p>Conecta el DAC con un cable o adaptador USB adecuado para tu teléfono. En iPhone, cada pista llega al DAC en su frecuencia original; el DSD puede viajar por DoP si tu DAC lo entiende (Plus). iOS no permite el acceso exclusivo al DAC, así que los sonidos del sistema pueden mezclarse: apaga los clics del teclado y el sonido de bloqueo para una escucha atenta. Si el DAC no se detecta, prueba primero con otro cable.</p>
+      <h3>La música se corta con la pantalla apagada (Android)</h3>
+      <p>Algunos teléfonos pausan las apps en segundo plano para ahorrar batería. En los ajustes de Android de IDection Audio, deja la batería en <strong>Sin restricciones</strong> — la app te ofrece llevarte ahí cuando detecta una restricción — y revisa que el ahorro de batería esté apagado mientras escuchas.</p>
+      <h3>¿Muestra letras, edita etiquetas o lee listas M3U?</h3>
+      <p>IDection Audio no modifica tus archivos: los reproduce tal como están. Por eso, hoy no edita los metadatos de las pistas (etiquetas ID3 y otras), no muestra letras ni lee listas de reproducción M3U. No lo descartamos para más adelante.</p>
       <h3>Restaurar Plus</h3>
       <p>Plus es un pago único. En un teléfono nuevo, abre la pantalla de Plus y toca <strong>Restaurar compra</strong>, con el mismo Apple ID (iPhone) o la misma cuenta de Google (Android) con que lo compraste.</p>
       <h3>Informar un problema</h3>
@@ -487,7 +493,7 @@
 
 <footer>
   <hr class="rule">
-  <p>IDection Audio — Support · October 25, 2026</p>
+  <p>IDection Audio — Support · November 22, 2026</p>
 </footer>
 </body>
 </html>
